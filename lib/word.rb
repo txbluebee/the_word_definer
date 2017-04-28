@@ -11,7 +11,7 @@ class Word
   def id
     @id
   end
-    
+
   def self.all
     @@words
   end
@@ -24,11 +24,20 @@ class Word
     @@words.push(self)
   end
 
-
+  def self.find(id)
+    found_word = nil
+    @@words.each() do |word|
+      if word.id() == id.to_i()
+        found_word = word
+      end
+    end
+    found_word
+  end
 
   def definitions
     @definitions
   end
+
 
 
 

@@ -51,5 +51,13 @@ describe(Word) do
       expect(word_2.id()).to(eq(2))
     end
 
+  describe('.find') do
+    it('finds the word based on given id number') do
+      word_1 = Word.new(:text =>'hello')
+      word_1.save()
+      expect(Word.find(word_1.id())).to(eq(word_1))
+    end
+  end
+
   end
 end
