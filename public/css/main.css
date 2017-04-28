@@ -1,0 +1,86 @@
+/***Layout***/
+
+html,
+body {
+  height: 100%
+}
+
+#cover {
+  background: url("../img/cover.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#cover-caption {
+  width: 100%;
+}
+
+#cover-caption h1 {
+  font-weight: bolder;
+}
+
+nav {
+  margin-bottom: 5rem;
+}
+
+/**Index***/
+
+.content{
+  padding-bottom: 5rem;
+}
+
+.content label {
+  font-size: 1.5rem;
+}
+
+/**words list***/
+
+#words ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+#words h1{
+  margin-bottom: 2rem;
+}
+
+#words a {
+  font-size: 2rem;
+  color: green;
+}
+
+#words li{
+  padding-left: -2rem;
+}
+
+/**Word page***/
+
+#each-word{
+  padding-bottom: 15rem;
+}
+
+#each-word ol{
+  margin-top: 2rem;
+  padding-left: 0;
+}
+
+#each-word p{
+  font-size: 1.5rem;
+}
+
+/**definition_form**/
+
+#definition_form {
+  padding-bottom: 15rem;
+}
+#definition_form label {
+  font-size: 2rem;
+}
+
+#definition_form a{
+  font-size: 1.25rem;
+}

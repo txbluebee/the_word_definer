@@ -1,14 +1,20 @@
-<form action='/add_definition' method='post'>
+<div id="definition_form" class="container">
+    <a href="/words/<%= @word.id() %>">Back to "<%= @word.text().upcase() %>"</a>
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form action='/add_definition' method='post'>
 
-  <input id='word_id' name='word_id' type= 'hidden' value="<%= @word.id() %>">
+        <input id='word_id' name='word_id' type= 'hidden' value="<%= @word.id() %>">
 
-  <div class='form-group'>
-    <label for="phrase">Add definition: </label>
-    <input type="text" name="phrase" id="phrase" class="form-control" required>
+        <div class='form-group'>
+          <label for="phrase">Add definition to '<%= @word.text().upcase%>': </label>
+          <input type="text" name="phrase" id="phrase" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Add</button>
+      </form>
+    </div>
   </div>
-  <button type="submit" class="btn btn-outline-primary">Add</button>
-</form>
 
-<a href="/">Home</a>
-<br>
-<a href="/words/<%= @word.id() %>">Go back to "<%= @word.text() %>"</a>
+  <br>
+
+</div>

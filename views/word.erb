@@ -1,13 +1,23 @@
-<h1><%= @word.text()%></h1>
 
 
-<a href="/words/<%= @word.id()%>/add_definition">Add deifinition</a>
+<div id="each-word" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1><%= @word.text().upcase()%></h1>
 
+      <br>
+      <a href="/words/<%= @word.id()%>/add_definition" role="button" class="btn btn-success">Add deifinition</a>
 
-<ul>
-<% @definitions.each() do |definition| %>
-  <li><%= definition.phrase() %></li>
-<% end  %>
-</ul>
+    </div>
+    <div class="col-md-6">
+      <h1>Definition:</h1>
+      <ol>
+      <% @definitions.each() do |definition| %>
+        <li><p><%= definition.phrase() %></p></li>
+      <% end  %>
+      </ol>
 
-<a href="/">Home</a>
+    </div>
+  </div>
+
+</div>

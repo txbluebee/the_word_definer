@@ -1,0 +1,12 @@
+<div id="words" class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <h1>Words You Created:  </h1>
+        <% @@words.each() do |word| %>
+          <ul>
+            <li><a class="list-word" href="/words/<%= word.id() %>"><%= word.text() %></a></li>
+          </ul>
+        <% end  %>
+    </div>
+  </div>
+</div>

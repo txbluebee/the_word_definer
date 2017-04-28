@@ -1,4 +1,4 @@
-#The Word Definer
+# The Word Definer
 
 #### Object-Oriented Ruby Independent Project, 04/28/2017
 
