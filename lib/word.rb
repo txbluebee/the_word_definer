@@ -38,7 +38,8 @@ class Word
     @definitions
   end
 
-
-
+  def add_definition(phrase)
+    @definitions.push(phrase)
+  end
 
 end

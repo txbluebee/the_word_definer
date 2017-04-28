@@ -35,13 +35,6 @@ describe(Word) do
     end
   end
 
-  describe('#definitions') do
-    it('returns the array of difinitions for the word') do
-      test_word = Word.new(:text =>'hello')
-      expect(test_word.definitions).to(eq([]))
-    end
-  end
-
   describe('#id') do
     it('returns the id number assigned to the word when created') do
       word_1 = Word.new(:text =>'hello')
@@ -50,6 +43,7 @@ describe(Word) do
       word_2.save()
       expect(word_2.id()).to(eq(2))
     end
+  end
 
   describe('.find') do
     it('finds the word based on given id number') do
@@ -59,5 +53,20 @@ describe(Word) do
     end
   end
 
+  describe('#definitions') do
+    it('returns the array of difinitions for the word') do
+      test_word = Word.new(:text =>'hello')
+      expect(test_word.definitions).to(eq([]))
+    end
   end
+
+  describe('#add_definition') do
+    it('add definitions to the word') do
+      test_word = Word.new(:text =>'hello')
+      test_definition = Definition.new(:phrase => "a greeting")
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions()).to(eq([test_definition]))
+    end
+  end
+
 end
