@@ -1,0 +1,13 @@
+<h1><%= @word.text()%></h1>
+
+
+<a href="/words/<%= @word.id()%>/add_definition">Add deifinition</a>
+
+
+<ul>
+<% @definitions.each() do |definition| %>
+  <li><%= definition.phrase() %></li>
+<% end  %>
+</ul>
+
+<a href="/">Home</a>
