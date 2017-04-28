@@ -15,9 +15,5 @@ post('/word_form') do
   test_word = Word.new(:text=> word)
   test_word.save()
   @@words = Word.all()
-  erb(:index)
-end
-
-get('/words/:id')
-  erb(:word)
+  erb(:success)
 end

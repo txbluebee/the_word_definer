@@ -1,7 +1,7 @@
 class Word
   attr_accessor(:text)
-  @@words = []
 
+  @@words = []
   def initialize(attributes)
     @text = attributes.fetch(:text)
     @id = @@words.length() + 1
@@ -41,5 +41,4 @@ class Word
   def add_definition(phrase)
     @definitions.push(phrase)
   end
-
 end

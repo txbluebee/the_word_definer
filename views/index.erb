@@ -1,0 +1,15 @@
+<h1>Hello</h1>
+<form action='/word_form' method='post'>
+  <div class='form-group'>
+    <label for="word">Enter a word: </label>
+    <input type="text" name="word" id="word" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-outline-primary">Add</button>
+</form>
+
+<h2>Words added:</h2>
+<% @@words.each() do |word| %>
+  <ul>
+    <li><a href="/words/<%= word.id() %>"><%= word.text() %></a></li>
+  </ul>
+<% end  %>
