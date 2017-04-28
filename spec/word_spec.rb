@@ -1,0 +1,2 @@
+require('word')
+require('rspec')
