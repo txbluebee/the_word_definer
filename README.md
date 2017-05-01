@@ -10,7 +10,7 @@ Word Definer is web application that would let the kids create a new word and gi
 
 ## Setup/Installation Requirements
 
-* Click [Heroku link](https://), or
+* Click [Heroku link](https://the-word-definer.herokuapp.com/), or
 * Install Ruby and Ruby gem 'Sinatra'
 * Clone this repository
 * Open terminal and run ruby app.rb
