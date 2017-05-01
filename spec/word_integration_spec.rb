@@ -9,6 +9,6 @@ describe('the word path', {:type => :feature}) do
     visit('/')
     fill_in('word', :with => 'hello')
     click_button('Add')
-    expect(page).to have_content('hellors')
+    expect(page).to have_content('hello')
   end
 end
